@@ -10,8 +10,8 @@ defmodule Paddle.Mixfile do
      start_permanent: Mix.env == :prod,
      deps: deps(),
      package: package(),
-     source_url: "https://github.com/minijackson/paddle",
-     homepage_url: "https://github.com/minijackson/paddle",
+     source_url: "https://github.com/brianmay/paddle",
+     homepage_url: "https://github.com/brianmay/paddle",
      elixirc_paths: elixirc_paths(Mix.env),
      docs: [extras: ["README.md"]]]
   end
@@ -41,10 +41,14 @@ defmodule Paddle.Mixfile do
   end
 
   defp package() do
-    [name: :paddle,
-     maintainers: ["Rémi Nicole"],
+    [
+      name: :penguin_paddle,
+     maintainers: ["Brian May"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/minijackson/paddle"}]
+      links: %{"GitHub" => "https://github.com/brianmay/paddle", "upstream" => "https://github.com/minijackson/paddle", },
+    source_url: "https://github.com/brianmay/paddle",
+    homepage_url: "https://github.com/brianmay/paddle",
+    ]
   end
 
   defp elixirc_paths(:prod), do: ["lib"]

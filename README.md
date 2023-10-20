@@ -8,6 +8,14 @@ A library simplifying LDAP usage in Elixir projects.
 
 [Documentation](https://hexdocs.pm/paddle/Paddle.html)
 
+##  FORKED VERSION
+
+This version forked from https://github.com/minijackson/paddle in order to
+solve bug [#81](https://github.com/minijackson/paddle/issues/82). Neither
+this version or the upstream version is maintained. You should not use this
+library for new projects. Unfortunately, there are no good LDAP libraries
+in Elxir.
+
 ## Why another LDAP library?
 
 If you want to communicate with an LDAP server in Elixir, you probably know
