@@ -733,7 +733,7 @@ defmodule Paddle do
     end
   end
 
-  defp do_connect(opts \\ []) do
+  defp do_connect(opts) do
     ssl = Keyword.get(opts, :ssl, config(:ssl))
     ipv6 = Keyword.get(opts, :ipv6, config(:ipv6))
     tcpopts = Keyword.get(opts, :tcpopts, config(:tcpopts))
