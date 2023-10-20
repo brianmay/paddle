@@ -1,6 +1,6 @@
 import Config
 
-config :paddle, Paddle,
+config :penguin_paddle, Paddle,
   schema_files: Path.wildcard("/etc/ldap/schema/*.schema"),
   host: ["192.168.42.42", "localhost"],
   base: "dc=test,dc=com",

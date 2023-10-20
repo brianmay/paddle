@@ -7,7 +7,7 @@ defmodule Paddle do
   The configuration should be in the dev.secret.exs or prod.secret.exs depending
   on the environment you're working on. Here's an example config:
 
-      config :paddle, Paddle,
+      config :penguin_paddle, Paddle,
         host: "ldap.my-organisation.org",
         base: "dc=myorganisation,dc=org",
         ssl: true,
@@ -113,7 +113,7 @@ defmodule Paddle do
 
   @type dn :: keyword | binary
 
-  unless Application.get_env(:paddle, __MODULE__) do
+  unless Application.get_env(:penguin_paddle, __MODULE__) do
     raise """
     Please configure the LDAP in the config files
     See the `Paddle` module documentation.
@@ -665,7 +665,7 @@ defmodule Paddle do
   @doc ~S"""
   Get the whole configuration of the Paddle application.
   """
-  def config, do: Application.get_env(:paddle, Paddle)
+  def config, do: Application.get_env(:penguin_paddle, Paddle)
 
   @spec config(atom) :: any
 
@@ -716,7 +716,7 @@ defmodule Paddle do
   @doc false
   def eldap_log_callback(level, format_string, format_args) do
     message =
-      case Application.get_env(:paddle, :filter_passwords, true) do
+      case Application.get_env(:penguin_paddle, :filter_passwords, true) do
         true ->
           :io_lib.format(format_string, format_args)
           |> to_string()

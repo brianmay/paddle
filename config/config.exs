@@ -10,18 +10,18 @@ import Config
 
 # You can configure for your application as:
 #
-#     config :paddle, key: :value
+#     config :penguin_paddle, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:paddle, :key)
+#     Application.get_env(:penguin_paddle, :key)
 #
 # Or configure a 3rd-party app:
 #
 #     config :logger, level: :info
 #
 
-config :paddle, Paddle,
+config :penguin_paddle, Paddle,
   host: "ldap.my-organisation.org",
   base: "dc=myorganisation,dc=org",
   ssl: true,

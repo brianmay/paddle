@@ -1,6 +1,6 @@
 import Config
 
-config :paddle, Paddle,
+config :penguin_paddle, Paddle,
   host: "localhost",
   base: "dc=test,dc=com",
   account_subdn: "ou=People",

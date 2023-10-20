@@ -76,7 +76,7 @@ The package can be installed as:
 
     ```elixir
     def deps do
-      [{:paddle, "~> 0.1.0"}]
+      [{:penguin_paddle, "~> 0.1.0"}]
     end
     ```
 
@@ -84,14 +84,14 @@ The package can be installed as:
 
     ```elixir
     def application do
-      [applications: [:paddle]]
+      [applications: [:penguin_paddle]]
     end
     ```
 
 3. Add your configuration in your config files:
 
     ```elixir
-    config :paddle, Paddle,
+    config :penguin_paddle, Paddle,
       host: "ldap.my-organisation.org",
       base: "dc=myorganisation,dc=org",
       ssl: true,
