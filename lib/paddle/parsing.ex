@@ -30,11 +30,11 @@ defmodule Paddle.Parsing do
   reordered and because they can be mistaken for a class object (see
   `Paddle.Class`).
   """
+  def construct_dn(map, base \\ '')
+
   def construct_dn(subdn, base) when is_binary(base) do
     construct_dn(subdn, :binary.bin_to_list(base))
   end
-
-  def construct_dn(map, base \\ '')
 
   def construct_dn([], base) when is_list(base), do: base
 
